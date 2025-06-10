@@ -1,24 +1,17 @@
-import { descriptionSchema, emailSchema, nameSchema, passwordConfirmationSchema, passwordSchema, phoneSchema } from "../../Utils/Validation/ValidationSchemas";
+import { emailSchema, nameSchema, passwordConfirmationSchema, passwordSchema } from "../../Utils/Validation/ValidationSchemas";
 
 export const RegistrationValidationSchema = {
-  name: nameSchema,
+  firstName: nameSchema,
+  lastName: nameSchema,
   email: emailSchema,
   password: passwordSchema,
-  password_confirmation: passwordConfirmationSchema,
-  store_name: nameSchema,
-  description: descriptionSchema,
-  address: descriptionSchema,
-  phone: phoneSchema,
+  confirmPassword: passwordConfirmationSchema,
 };
 
 export const RegistrationInitialValues = {
-  name: "",
-  password: "",
+  firstName: "",
+  lastName: "",
   email: "",
-  password_confirmation: "",
-  store_name: "",
-  description: "",
-  address: "",
-  phone: "",
-  country_code: "91",
+  password: "",
+  confirmPassword: "",
 };
