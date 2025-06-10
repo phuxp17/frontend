@@ -4,8 +4,8 @@ const nextConfig = {
   swcMinify: true,
   env: {
     // For Local Server
-    // API_PROD_URL: "http://127.0.0.1:8000/api/",
-    API_PROD_URL: "http://localhost:8000/api/",
+    // API_PROD_URL: "http://127.0.0.1:8080/api/",
+    API_PROD_URL: "http://localhost:8080/api/",
   },
   redirects: async () => {
     return [
@@ -21,11 +21,11 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: "http",
-        hostname: "localhost:8000",
+        hostname: "localhost:8080",
       },
       // {
       //   protocol: "http",
-      //   hostname: "127.0.0.1:8000",
+      //   hostname: "127.0.0.1:8080",
       // },
       // {
       //   protocol: "http",
