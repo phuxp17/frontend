@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev:rest": "next dev",
-    "dev": "node dev:rest",
+    "dev": "next dev",
     "build": "next build",
     "start": "NODE_ENV=production node server.js",
     "lint": "next lint"
