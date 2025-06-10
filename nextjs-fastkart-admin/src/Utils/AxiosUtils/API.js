@@ -1,5 +1,5 @@
 // authentication
-export const login = "/backend/login";
+export const login = "/api/login";
 export const register = "register";
 export const forgotPassword = "forgot-password";
 export const verifyToken = "verify-token";

@@ -13,11 +13,12 @@ export const LogInSchema = YupObject({
 
 const LoginHandle = (responseData, router, setShowBoxMessage, setCookie) => {
   if (responseData.status === 200) {
-    setCookie("uat", responseData.data?.access_token, { path: "/", expires: new Date(Date.now() + 24 * 60 * 6000) });
-    const ISSERVER = typeof window === "undefined";
+    const token = responseData.data?.jwt || responseData.data?.token || responseData.data?.access_token;
+    setCookie("uat", token, { path: "/", expires: new Date(Date.now() + 24 * 60 * 6000) });
+    const account = responseData.data?.user || responseData.data;
     if (typeof window !== "undefined") {
-      setCookie("account", JSON.stringify(responseData.data))
-      localStorage.setItem("account", JSON.stringify(responseData.data));
+      setCookie("account", JSON.stringify(account))
+      localStorage.setItem("account", JSON.stringify(account));
     }
     router.push("/en/dashboard");
   } else {
