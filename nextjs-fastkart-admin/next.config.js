@@ -1,0 +1,41 @@
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  reactStrictMode: false,
+  swcMinify: true,
+  env: {
+    // For Local Server
+    // API_PROD_URL: "http://127.0.0.1:8000/api/",
+    API_PROD_URL: "http://localhost:8000/api/",
+  },
+  redirects: async () => {
+    return [
+      {
+        source: "/",
+        destination: "/en/dashboard",
+
+        permanent: true,
+      },
+    ];
+  },
+  images: {
+    remotePatterns: [
+      {
+        protocol: "http",
+        hostname: "localhost:8000",
+      },
+      // {
+      //   protocol: "http",
+      //   hostname: "127.0.0.1:8000",
+      // },
+      // {
+      //   protocol: "http",
+      //   hostname: "localhost",
+      // },
+    ],
+  },
+  devIndicators: {
+    buildActivity: false,
+  },
+};
+
+module.exports = nextConfig;
