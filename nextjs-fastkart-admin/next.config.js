@@ -3,8 +3,8 @@ const nextConfig = {
   reactStrictMode: false,
   swcMinify: true,
   env: {
-    // For Local Server
-    API_PROD_URL: "http://localhost:8080/api/",
+    // For Local or deployment environments
+    API_PROD_URL: process.env.API_PROD_URL || "http://localhost:8080/api/",
   },
   redirects: async () => {
     return [

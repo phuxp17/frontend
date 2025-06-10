@@ -28,6 +28,9 @@ cd backend
 
 The application will start on `http://localhost:8080`.
 
+Ensure the `API_PROD_URL` environment variable points to the backend API
+(`http://localhost:8080/api/`) when running the frontend.
+
 ## Running the Next.js Frontend
 
 Before starting the frontend, set the `API_PROD_URL` environment variable to the
@@ -35,7 +38,7 @@ base URL of the backend. Then start the development server:
 
 ```bash
 cd nextjs-fastkart-admin
-export API_PROD_URL=http://localhost:8080/
+export API_PROD_URL=http://localhost:8080/api/
 npm install
 npm run dev
 ```
@@ -43,7 +46,7 @@ npm run dev
 On Windows use `set` instead of `export`:
 
 ```cmd
-set API_PROD_URL=http://localhost:8080/
+set API_PROD_URL=http://localhost:8080/api/
 npm install
 npm run dev
 ```
