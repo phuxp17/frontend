@@ -59,6 +59,7 @@ export const ifShippingTypeIsFree = Yup.number().when("shipping_type", {
 export const discountSchema = Yup.number().min(0).max(100);
 export const requiredSchema = Yup.mixed().required();
 export const StatusSchema = Yup.boolean().required();
+export const acceptSchema = Yup.boolean().oneOf([true]);
 
 export const phoneSchema = Yup.string().min(6).max(15).required()
 
