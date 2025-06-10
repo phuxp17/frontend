@@ -1,6 +1,7 @@
 import { Field } from "formik";
 import { Col } from "reactstrap";
 import { ReactstrapInput } from "../ReactstrapFormik";
+import CheckBoxField from "../InputFields/CheckBoxField";
 
 const UserPersonalInfo = () => {
   return (
@@ -19,6 +20,9 @@ const UserPersonalInfo = () => {
       </Col>
       <Col sm="6">
         <Field name="confirmPassword" type="password" component={ReactstrapInput} className="form-control" id="confirmPassword" placeholder="Confirm Password" label="ConfirmPassword" />
+      </Col>
+      <Col xs="12">
+        <CheckBoxField name="accept" title="AcceptTerms" />
       </Col>
     </>
   );

@@ -1,4 +1,4 @@
-import { emailSchema, nameSchema, passwordConfirmationSchema, passwordSchema } from "../../Utils/Validation/ValidationSchemas";
+import { emailSchema, nameSchema, passwordConfirmationSchema, passwordSchema, acceptSchema } from "../../Utils/Validation/ValidationSchemas";
 
 export const RegistrationValidationSchema = {
   firstName: nameSchema,
@@ -6,6 +6,7 @@ export const RegistrationValidationSchema = {
   email: emailSchema,
   password: passwordSchema,
   confirmPassword: passwordConfirmationSchema,
+  accept: acceptSchema,
 };
 
 export const RegistrationInitialValues = {
@@ -14,4 +15,5 @@ export const RegistrationInitialValues = {
   email: "",
   password: "",
   confirmPassword: "",
+  accept: false,
 };
