@@ -4,8 +4,7 @@ const nextConfig = {
   swcMinify: true,
   env: {
     // For Local Server
-    // API_PROD_URL: "http://127.0.0.1:8000/api/",
-    API_PROD_URL: "http://localhost:8000/api/",
+    API_PROD_URL: "http://localhost:8080/api/",
   },
   redirects: async () => {
     return [
