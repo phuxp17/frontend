@@ -5,7 +5,6 @@ import { Col, Container, Row } from "reactstrap";
 import { useTranslation } from "@/app/i18n/client";
 import { Form, Formik } from "formik";
 import { RegistrationInitialValues, RegistrationValidationSchema } from "@/Components/Auth/RegistrationFormObjects";
-import UserAddress from "@/Components/Auth/UserAddress";
 import UserContact from "@/Components/Auth/UserContact";
 import UserPersonalInfo from "@/Components/Auth/UserPersonalInfo";
 import Btn from "@/Elements/Buttons/Btn";
@@ -42,7 +41,6 @@ const VendorRegister = () => {
                                     {({ values, errors }) => (
                                         <Form className="row g-4">
                                             <UserPersonalInfo />
-                                            <UserAddress values={values} />
                                             <UserContact />
                                             <Col xs={12}>
                                                 <Btn title="Submit" className="btn btn-animation w-100 justify-content-center" type="submit" color="false" loading={Number(isLoading)} />
